@@ -30,7 +30,7 @@ services:
     image: rzngzn/shinyproxy_bkfst:cd
     depends_on:
       - shinyapp
-    container_name: shinyproxy_bkfst:cd
+    container_name: shinyproxy
     expose:
       - 8080
     volumes:
