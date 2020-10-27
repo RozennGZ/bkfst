@@ -25,7 +25,7 @@ proxy:
     description: Application pour évaluer ton petit-déjeuner
     container-cmd: ["R", "-e", "shiny::runApp('/root/breakfast_demo')"]
     container-image: rzngzn/bkfst:latest
-    container-network: sp-example-net
+    container-network: sp-net
 
 logging:
   file:

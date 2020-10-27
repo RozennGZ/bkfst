@@ -15,7 +15,7 @@ services:
       - "80:80"
       - "443:443"
     networks:
-      - sp-example-net
+      - sp-net
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
   certbot:
     image: certbot/certbot
@@ -24,7 +24,7 @@ services:
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
     networks:
-      - sp-example-net
+      - sp-net
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
   shinyproxy:
     image: rzngzn/shinyproxy_bkfst:dc
@@ -37,10 +37,10 @@ services:
       - ./apps/shinyproxy/application.yml:/opt/shinyproxy/application.yml
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
-      - sp-example-net
+      - sp-net
   shinyapp:
     image: rzngzn/bkfst
 
 networks:
   sp-net:
-    name: sp-example-net
+    name: sp-net
