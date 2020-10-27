@@ -27,10 +27,10 @@ services:
       - sp-net
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
   shinyproxy:
-    image: rzngzn/shinyproxy_bkfst:dc
+    image: rzngzn/shinyproxy_bkfst:cd
     depends_on:
       - shinyapp
-    container_name: shinyproxy_bkfst:dc
+    container_name: shinyproxy_bkfst:cd
     expose:
       - 8080
     volumes:
