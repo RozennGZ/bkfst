@@ -1,5 +1,5 @@
 proxy:
-  title: MS-Nutrition Shiny Portal
+  title: MS-Nutrition Shiny applications
   port: 8080
 
   container-wait-time: 30000
