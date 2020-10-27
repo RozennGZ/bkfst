@@ -29,5 +29,5 @@ proxy:
 
 logging:
   file:
-    shinyproxy.log
+    /log/shinyproxy.log
 
