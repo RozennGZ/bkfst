@@ -5,7 +5,7 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   exit 1
 fi
 
-domains=(shiny.ardata.fr)
+domains=(app.nutrition-quantitative.com)
 rsa_key_size=4096
 data_path="./data/certbot"
 email="rozenn.gazan@ms-nutrition.com" # L'ajout d'une adresse valide est fortement recommandé
