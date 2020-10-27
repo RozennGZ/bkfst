@@ -1,5 +1,6 @@
 proxy:
   title: MS-Nutrition Shiny applications
+  logo-url: https://ms-nutrition.com/wp-content/themes/msnutrition/images/logo.png
   port: 8080
 
   container-wait-time: 30000
