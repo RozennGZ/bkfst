@@ -34,7 +34,7 @@ services:
     expose:
       - 8080
     volumes:
-      - ./apps/shinyproxy/application.yml:/opt/shinyproxy/application.yml
+      - ./apps/shinyproxy_bkfst/application.yml:/opt/shinyproxy/application.yml
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - sp-net
